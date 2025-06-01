@@ -49,7 +49,20 @@ async function fetchHistoricalRates(code = 'UZS', days = 30) {
   return { labels, rates };
 }
 
+function updatePlaceholder() {
+  const direction = document.querySelector('input[name="direction"]:checked').value;
+  const input = document.getElementById('amount');
+
+  if (direction === 'to') {
+    input.placeholder = 'Введите сумму в рублях';
+  } else {
+    input.placeholder = 'Введите сумму в сумах (UZS)';
+  }
+}
+
 window.onload = async () => {
+  updatePlaceholder(); // начальный placeholder
+
   const { labels, rates } = await fetchHistoricalRates('UZS');
 
   const ctx = document.getElementById('rateChart').getContext('2d');
@@ -70,13 +83,11 @@ window.onload = async () => {
         if (elements.length > 0) {
           const i = elements[0].index;
 
-          // Подсветка столбца
           chart.data.datasets[0].backgroundColor = barColors.map((_, index) =>
             index === i ? '#cc66ff' : '#663399'
           );
           chart.update();
 
-          // Показать инфобокс
           document.getElementById('selectedInfo').textContent =
             `Дата: ${labels[i]} — Курс: ${rates[i]} ₽`;
         }
