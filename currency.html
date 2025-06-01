@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>АПРИ | Курс валют</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon-32x32.png">
+  <link rel="icon" href="favicon-16x16.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="currency.js" defer></script>
+</head>
+<body>
+  <nav class="side-menu">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="info.html">О компании</a></li>
+      <li><a href="news.html">Новости</a></li>
+      <li><a href="currency.html" class="active">Курс валют</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="video.html">Видео</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <header>Курс валют и график</header>
+    <main>
+      <h1>Конвертер валют (UZS)</h1>
+      <input type="number" id="amount" placeholder="Введите сумму в рублях">
+      <input type="hidden" id="currency" value="UZS">
+      <div>
+      <label>
+        <input type="radio" name="direction" value="to" checked>
+        Из рублей в валюту
+      </label>
+      <label>
+        <input type="radio" name="direction" value="from">
+        Из валюты в рубли
+      </label>
+      </div>
+      <button onclick="convertCurrency()">Перевести</button>
+      <p id="result"></p>
+      <canvas id="rateChart" width="600" height="300"></canvas>
+      <div id="selectedInfo" class="info-box">Нажмите на столбец, чтобы увидеть подробности</div>
+    </main>
+  </div>
+</body>
+</html>
