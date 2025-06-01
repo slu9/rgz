@@ -1,0 +1,481 @@
+/* === Базовые стили === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  background: linear-gradient(135deg, #f9f9fb 0%, #e9e9f9 100%);
+  color: #333;
+}
+
+/* === Меню слева === */
+.side-menu {
+  width: 220px;
+  background: #f4f4fa;
+  border-radius: 14px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li {
+  margin-bottom: 15px;
+}
+
+.side-menu a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #663399;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.side-menu a:hover,
+.side-menu a.active {
+  border: 2px solid #663399;
+  background-color: white;
+  color: #4b0082;
+}
+
+/* === Контент === */
+.content {
+  flex-grow: 1;
+  padding: 30px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #e8e8f8;
+  color: #4b0082;
+  padding: 16px 32px;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  color: #663399;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f1f1fa;
+  color: #555;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+}
+.button-link {
+  display: inline-block;
+  background-color: #663399;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+.button-link:hover {
+  background-color: #4b0082;
+}
+.intro-text-beauty {
+  max-width: 1000px;
+  margin: 40px auto 60px auto;
+  padding: 60px 40px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+.section-title {
+  font-size: 24px;
+  margin: 60px auto 20px;
+  text-align: center;
+  color: #4b0082;
+}
+.timeline {
+  position: relative;
+  margin: 60px auto;
+  max-width: 900px;
+  padding-left: 20px;
+  border-left: 3px solid #663399;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -24px;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  background-color: #663399;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px white;
+}
+
+.timeline-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(102, 51, 153, 0.08);
+}
+.page-header {
+  display: flex;
+  align-items: center;
+  background-color: #edeafd;
+  padding: 16px 40px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 20px;
+  color: #4b0082;
+  font-weight: bold;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 16px;
+}
+.page-header img {
+  height: 36px;
+}
+/* === Галерея проектов === */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* === Выгодные предложения === */
+.offers {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.offer-block {
+  background: #f1effc;
+  border-radius: 16px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.offer-block:hover {
+  background: #e8e4f8;
+  transform: translateY(-5px);
+}
+
+.offer-block img {
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.offer-block h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #4b0082;
+}
+
+.offer-block p {
+  font-size: 14px;
+  color: #666;
+}
+/* === Сценарии жизни === */
+.life-scenarios {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 24px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* для Firefox */
+  -ms-overflow-style: none;  /* для IE и Edge */
+}
+
+.life-scenarios::-webkit-scrollbar {
+  display: none; /* для Chrome, Safari и Opera */
+}
+
+.life-card {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 240px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.life-card:hover {
+  transform: scale(1.06);
+}
+
+.life-card span {
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* === Факты о компании === */
+.facts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.fact-block {
+  background-color: #f5f3fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(102, 51, 153, 0.1);
+  width: 180px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fact-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(102, 51, 153, 0.2);
+}
+
+.fact-block span:first-child {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #663399;
+  margin-bottom: 8px;
+}
+
+.fact-block span:last-child {
+  font-size: 14px;
+  color: #666;
+}
+
+/* === Прочее === */
+input, select, button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #663399;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4b0082;
+}
+
+canvas {
+  margin: 30px auto;
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.info-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f6ff;
+  border-left: 4px solid #663399;
+  font-size: 16px;
+  color: #333;
+  border-radius: 6px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+iframe {
+  display: block;
+  margin: 30px auto;
+  border: none;
+  border-radius: 8px;
+  max-width: 90%;
+}
+
+/* Кнопка «Наверх» */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #663399;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #4b0082;
+}
+
+.accordion-container {
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.accordion-item {
+  background: #edeafd;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(102, 51, 153, 0.08);
+  padding: 20px 28px;
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 10px 24px rgba(102, 51, 153, 0.25); /* красивое поднятие */
+}
+
+.accordion-button {
+  background: transparent;
+  color: #4b0082;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-button:hover {
+  background: #6b519e00;
+}
+
+.accordion-button span {
+  display: block;
+  margin-top: 8px;
+}
+
+.accordion-button em {
+  font-size: 14px;
+  color: #666;
+  font-weight: normal;
+}
+
+.accordion-content {
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #fdfbff;
+}
+
+.accordion-content p {
+  margin: 16px 0 24px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.accordion-date {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; 
+}
